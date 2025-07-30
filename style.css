@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Banana";
+  src:
+    url("./assets/font/banana_slip.otf") format("opentype"),
+}
+
+* {
+  font-family: "Banana";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 900px;
+  min-width: 700px;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #80C342;
+}
+
+.game-title {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 5em;
+  color: whitesmoke;
+  -webkit-text-stroke: 1px rgb(45, 49, 48);
+}
+
+#route-map {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  top: 15%;
+  left: 5%;
+  background-color: aliceblue;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+}
+
+.circle {
+  --r: 300;
+  position: relative;
+  width: calc(var(--r) * 2px);
+  height: calc(var(--r) * 2px);
+  text-align: center;
+  border-radius: 50%;
+  border: solid #80C342 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.circle-item {
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 10vh;
+  border: #80C342 solid;
+  padding: 0 4px;
+  position: absolute;
+  /* --a2: calc(var(--a) * 1deg );
+  --x: calc(cos(var(--a2)) * var(--r) * 1px);
+  --y: calc(sin(var(--a2) * -1) * var(--r) * 1px);
+  translate: var(--x) var(--y); */
+  opacity: 1.0;
+  translate: 200px 0px;
+}
+
+#station0 {
+  border: red solid;
+  cursor: not-allowed;
+}
+
+.btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  font-size: xx-large;
+  border-radius: 50%;
+  color: aliceblue;
+  background-color: #80C342;
+  width: 150px;
+  height: 150px;
+  border: none;
+  box-shadow: 3px 3px 3px #aaa;
+  transition: all 0.3s;
+}
+
+.btn:active {
+  transform: translate(-49%, -49%);
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: #3ba82c;
+  cursor: pointer;
+}
+
+.restart-btn {
+  background-color: orange;
+}
+
+.result-message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.clear {
+  color: blue;
+}
+
+.failed {
+  color: red;
+}
+
+/* .replace-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 15%;
+  padding: 8px;
+  border-radius: 100vh;
+  border: #80C342;
+  border: none;
+  box-shadow: 3px 3px 3px #aaa;
+  transition: all 0.3s;
+  color: aliceblue;
+  background-color: orange;
+  font-size: large;
+  display: none;
+}
+
+.replace-btn:active {
+  transform: translate(-49%, -49%);
+  box-shadow: none;
+} */
+
+.restart-btn:hover {
+  background-color: rgb(255, 102, 0);
+  cursor: pointer;
+}
+
+.mute-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 90%;
+  background: none;
+  border: none;
+  padding: auto;
+  display: none;
+  width: 48px;
+  height: 48px;
+}
+
+.mute-btn:hover {
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(78%) sepia(83%) saturate(174%) hue-rotate(146deg) brightness(89%) contrast(92%);
+}

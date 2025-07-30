@@ -5,17 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
-  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>山手線並べ替えゲーム</title>
 </head>
 
 <body>
-  <h1>DIG プログラミング基礎へようこそ！</h1>
-  <h2>Mac をお使いの方は、 <font color="blue"> Cmd + Option + J</font><br>
-    Windows/Linux をお使いの方は、 <font color="blue"> Control+Shift+J</font> <br>
-    をクリックして、デベロッパーツールを開いてください。</h2>
-  <h2>下記にユニコーンの画像が表示されていれば成功です！</h2>
-  <img src="https://cdn.dribbble.com/users/1281272/screenshots/4515441/unicorn.gif">
-  <h3>30分悩んで進まなくなったら…helpチャンネルで質問してみましょう！</h3>
+  <div class="container">
+    <h1 class="game-title">山手線並べ替えゲーム</h1>
+    <div id="route-map"></div>
+    <button type="button" class="btn restart-btn" onclick="restart()">もう一度</button>
+    <button type="button" class="btn check-answer-btn" onclick="checkAnswer()">答え合わせ</button>
+    <button type="button" class="btn start-btn" onclick="gameStart()">スタート</button>
+    <!-- <button type="button" class="replace-btn" onclick="reset()">配置シャッフル</button> -->
+    <button type="button" class="mute-btn" onclick="mute()"><img src="./assets/icon/mute_icon.svg"></button>
+    <h1 class="result-message clear">CLEAR!</h1>
+    <h1 class="result-message failed">FAILED!</h1>
+    <audio id="music" src="./assets/audio/かえるのピアノ.mp3" loop></audio>
+    <audio id="correct" src="./assets/audio/correct.mp3"></audio>
+    <audio id="failed" src="./assets/audio/failed.mp3"></audio>
+    <audio id="yay" src="./assets/audio/yay.mp3"></audio>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
