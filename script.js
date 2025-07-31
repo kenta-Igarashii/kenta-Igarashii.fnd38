@@ -121,7 +121,7 @@ const reset = () => {
 
 const audioPlay = (audio) => {
   audio.play();
-  audio.volume = 0.2;
+  audio.volume = 0.02;
 };
 
 const checkAnswer = () => {
