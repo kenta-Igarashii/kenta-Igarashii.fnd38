@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 900px;
+  height: 1000px;
   min-width: 700px;
   max-width: 1000px;
   margin: auto;
@@ -70,10 +70,6 @@ body {
   border: #80C342 solid;
   padding: 0 4px;
   position: absolute;
-  /* --a2: calc(var(--a) * 1deg );
-  --x: calc(cos(var(--a2)) * var(--r) * 1px);
-  --y: calc(sin(var(--a2) * -1) * var(--r) * 1px);
-  translate: var(--x) var(--y); */
   opacity: 1.0;
   translate: 200px 0px;
 }
@@ -130,28 +126,6 @@ body {
   color: red;
 }
 
-/* .replace-btn {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 20%;
-  left: 15%;
-  padding: 8px;
-  border-radius: 100vh;
-  border: #80C342;
-  border: none;
-  box-shadow: 3px 3px 3px #aaa;
-  transition: all 0.3s;
-  color: aliceblue;
-  background-color: orange;
-  font-size: large;
-  display: none;
-}
-
-.replace-btn:active {
-  transform: translate(-49%, -49%);
-  box-shadow: none;
-} */
-
 .restart-btn:hover {
   background-color: rgb(255, 102, 0);
   cursor: pointer;
@@ -168,9 +142,19 @@ body {
   display: none;
   width: 48px;
   height: 48px;
+  text-align: left;
 }
 
 .mute-btn:hover {
   cursor: pointer;
   filter: brightness(0) saturate(100%) invert(78%) sepia(83%) saturate(174%) hue-rotate(146deg) brightness(89%) contrast(92%);
+}
+
+.description {
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 50%;
+  font-weight: lighter;
 }
