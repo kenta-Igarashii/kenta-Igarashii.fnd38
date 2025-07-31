@@ -114,34 +114,24 @@ const restart = () => {
   document.getElementsByClassName("check-answer-btn")[0].style.display = "block";
 };
 
-const reset = () => {
-  messageClear();
-  dragDrop();
-};
-
 const audioPlay = (audio) => {
   audio.play();
   audio.volume = 0.02;
 };
 
 const checkAnswer = () => {
-  messageClear();
-
   const answer = [];
   for (let i = 0; i < yamate.length; i++) {
     answer.push(document.getElementById(`station${i}`).textContent);
   }
 
   if (JSON.stringify(answer) === JSON.stringify(yamate)) {
-    const soundCorrect = document.querySelector("#correct");
-    const soundYay = document.querySelector("#yay");
-    audioPlay(soundCorrect);
-    audioPlay(soundYay);
+    audioPlay(document.querySelector("#correct"));
+    audioPlay(document.querySelector("#yay"));
     document.getElementsByClassName("result-message clear")[0].style.display = "block";
     document.getElementsByClassName("check-answer-btn")[0].style.display = "none";
   } else {
-    const soundFailed = document.querySelector("#failed");
-    audioPlay(soundFailed)
+    audioPlay(document.querySelector("#failed"))
     document.getElementsByClassName("result-message failed")[0].style.display = "block";
     setTimeout(messageClear, 1000);
   }
